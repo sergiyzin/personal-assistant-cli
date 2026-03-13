@@ -2,7 +2,7 @@ import difflib
 
 from storage import load_data, save_data
 
-# Список всіх CLI команд
+# Список всі 
 COMMANDS = [
     "help",
     "add-contact",
