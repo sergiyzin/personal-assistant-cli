@@ -233,13 +233,9 @@ def main():
             elif command == "edit-note":
                 note_id = int(input("Note ID: ").strip())
                 new_text = input("New text: ").strip()
-                note = notes_manager.get_note_by_id(note_id)
-                if not note:
-                    print("Note not found.")
-                else:
-                    note.edit_text(new_text)
-                    save_data(address_book, notes_manager)
-                    print("Note updated.")
+                notes_manager.edit_note(note_id, new_text)
+                save_data(address_book, notes_manager)
+                print("Note updated.")
 
             elif command == "delete-note":
                 note_id = int(input("Note ID: ").strip())
