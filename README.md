@@ -1,5 +1,4 @@
 # Personal Assistant CLI
-
 Командний фінальний проєкт команди **Team 4** для курсу
 **Python Programming: Foundations and Best Practices**.
 
@@ -10,7 +9,6 @@
 ---
 
 # Функціонал
-
 Програма дозволяє робити наступне:
 
 ### Контакти
@@ -45,8 +43,7 @@
 
 ---
 
-# Технології
-
+## Технології
 Проєкт реалізований з використанням:
 
 - Python 3
@@ -61,10 +58,8 @@
 Зовнішні залежності не потрібні.
 
 ---
-
 ## Встановлення
 ### 1. Клонувати репозиторій
-
 git clone https://github.com/sergiyzin/personal-assistant-cli.git
 cd personal-assistant-cli
 
@@ -82,7 +77,7 @@ source .venv/bin/activate
 ## Запуск програма
 python3 main.py
 
-# Основні команди
+## Основні команди
 help
 add-contact
 show-contacts
