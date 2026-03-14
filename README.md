@@ -71,15 +71,15 @@ cd personal-assistant-cli
 ---
 
 # Створення та запуску віртуального середовища
-# Windows
+## Windows
 python -m venv .venv
 .venv\Scripts\activate
 
-# macOS/Linux
+## macOS/Linux
 python3 -m venv .venv
 source .venv/bin/activate
 
-# Запуск програма
+## Запуск програма
 python3 main.py
 
 # Основні команди
@@ -107,7 +107,7 @@ find-tag
 sort-notes-tags
 exit
 
-# Збереження даних
+## Збереження даних
 Програма зберігає всі дані локально у JSON-файлі.
 Контакти та нотатки автоматично завантажуються при запуску та зберігаються після змін.
 
