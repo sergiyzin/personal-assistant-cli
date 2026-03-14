@@ -47,6 +47,15 @@ def load_data():
 
         return address_book, notes_manager
 
-    # Файл пошкоджений або сталася помилка - то повертає порожні об'єкти
-    except (json.JSONDecodeError, OSError, ValueError):
+    # файл пошкоджений або сталася помилка — виводимо warning і повертаємо порожні дані
+    except json.JSONDecodeError:
+        print(f"Warning: corrupted JSON file: {DATA_FILE}")
+        return AddressBook(), NotesManager()
+
+    except OSError as error:
+        print(f"Warning: cannot read file: {error}")
+        return AddressBook(), NotesManager()
+
+    except ValueError as error:
+        print(f"Warning: invalid data format: {error}")
         return AddressBook(), NotesManager()
