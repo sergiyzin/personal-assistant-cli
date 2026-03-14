@@ -110,7 +110,7 @@ class NotesManager:
         tag = normalize_tag(tag)
         return [note for note in self.notes if note.has_tag(tag)]
     
-    def edit_note(self, note_id: int, new_text: str):
+def edit_note(self, note_id: int, new_text: str):
     note = self.get_note_by_id(note_id)
     if not note:
         raise ValueError("Note not found.")
