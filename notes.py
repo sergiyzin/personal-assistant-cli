@@ -116,19 +116,19 @@ def edit_note(self, note_id: int, new_text: str):
         raise ValueError("Note not found.")
     note.edit_text(new_text)
 
-# Покращене сортування нотаток за тегами
-# 1. Спочатку нотатки з тегами
-# 2. Потім по алфавіту першого тегу
-# 3. Потім стабільно по note_id
-def sort_by_tags(self):
-    return sorted(
-        self.notes,
-        key=lambda note: (
-            len(note.tags) == 0,
-            sorted(note.tags)[0] if note.tags else "",
-            note.note_id,
+    # Покращене сортування нотаток за тегами
+    # 1. Спочатку нотатки з тегами
+    # 2. Потім по алфавіту першого тегу
+    # 3. Потім стабільно по note_id
+    def sort_by_tags(self):
+        return sorted(
+            self.notes,
+            key=lambda note: (
+                len(note.tags) == 0,
+                sorted(note.tags)[0] if note.tags else "",
+                note.note_id,
+            )
         )
-    )
 
     def all_notes(self):
         return self.notes
