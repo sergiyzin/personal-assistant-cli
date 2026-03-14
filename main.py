@@ -2,7 +2,7 @@ import difflib
 
 from storage import load_data, save_data
 
-# Список всі 
+# Спи
 COMMANDS = [
     "help",
     "add-contact",
