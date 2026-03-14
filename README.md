@@ -52,6 +52,10 @@
 - Git та GitHub для командної розробки
 
 ---
+## Dependencies
+The project uses only Python standard libraries.
+No external packages are required.
+---
 
 # Структура проєкту
 personal-assistant-cli
