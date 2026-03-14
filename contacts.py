@@ -141,6 +141,22 @@ class AddressBook:
         # Словник контактів
         self.contacts = {}
 
+    # FIX for Issue #1
+    # Пошук контакту без урахування регістру
+    def _find_contact_key(self, name: str):
+        """
+        Повертає правильний ключ контакту зі словника
+        незалежно від регістру введеного імені.
+        """
+
+        target = name.strip().lower()
+
+        for key in self.contacts:
+            if key.lower() == target:
+                return key
+
+        return None
+
     def add_contact(self, name, address="", phone=None, email="", birthday=""):
         name = validate_name(name)
 
@@ -165,11 +181,15 @@ class AddressBook:
         self.contacts[name] = contact
 
     def get_contact(self, name: str):
-        return self.contacts.get(name)
+        key = self._find_contact_key(name)
+        if key:
+            return self.contacts.get(key)
+        return None
 
     def delete_contact(self, name: str):
-        if name in self.contacts:
-            del self.contacts[name]
+        key = self._find_contact_key(name)
+        if key:
+            del self.contacts[key]
         else:
             raise ValueError("Contact not found.")
 
