@@ -65,7 +65,7 @@ cd personal-assistant-cli
 
 ---
 
-# Створення та запуску віртуального середовища
+# Створення та запуск віртуального середовища
 ## Windows
 python -m venv .venv
 .venv\Scripts\activate
@@ -74,7 +74,7 @@ python -m venv .venv
 python3 -m venv .venv
 source .venv/bin/activate
 
-## Запуск програма
+## Запуск програми
 python3 main.py
 
 ## Основні команди
