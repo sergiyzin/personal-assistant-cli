@@ -281,6 +281,8 @@ def main():
             for note in notes:
                 print(note)
 
+    # Словник відповідності: команда CLI → функція-обробник
+    # Дозволяє уникнути довгого if-elif ланцюжка
     commands = {
         "help": handle_help,
         "add-contact": handle_add_contact,
@@ -306,27 +308,34 @@ def main():
         "sort-notes-tags": handle_sort_notes_tags,
     }
 
-    # CLI цикл
+    # Основний цикл CLI — програма працює, поки користувач не введе exit
     while True:
+        # Читаємо команду користувача
         command = input("Enter command: ").strip()
 
         try:
+            # Спеціальна команда завершення програми
+            # Спеціальна команда завершення програми
             if command == "exit":
-                save_data(address_book, notes_manager)
+                save_data(address_book, notes_manager) # зберігаємо дані перед виходом
                 print("Goodbye!")
                 break
 
+            # Шукаємо функцію-обробник у словнику команд
             handler = commands.get(command)
 
+            # Якщо команда існує — викликаємо відповідну функцію
             if handler:
                 handler()
             else:
+                # Якщо команда не знайдена — намагаємось запропонувати схожу
                 suggestion = suggest_command(command)
                 if suggestion:
                     print(f"Unknown command. Maybe you meant: {suggestion}")
                 else:
                     print("Unknown command. Type 'help'.")
 
+        # Обробка помилок введення (наприклад, якщо очікується число)
         except ValueError as error:
             print(f"Error: {error}")
 
