@@ -65,7 +65,7 @@ cd personal-assistant-cli
 
 ---
 
-# Створення та запуску віртуального середовища
+# Створення та запуск віртуального середовища
 ## Windows
 python -m venv .venv
 .venv\Scripts\activate
@@ -74,7 +74,7 @@ python -m venv .venv
 python3 -m venv .venv
 source .venv/bin/activate
 
-## Запуск програма
+## Запуск програми
 python3 main.py
 
 ## Основні команди
@@ -110,11 +110,11 @@ exit
 personal-assistant-cli
 │
 ├── main.py # основний CLI та обробка команд
-├── contacts.py # моделі контактів (Record, AddressBook)
+├── contacts.py # моделі контактів (Contact, AddressBook)
 ├── notes.py # модель нотаток та менеджер нотаток
 ├── storage.py # збереження і завантаження JSON
 ├── validation.py # перевірка телефонів, email та інших даних
-├── requirements.txt інформація про залежності проєкту
+├── requirements.txt інформація про залежності проєкт
 └── README.md
 
 # Команда
