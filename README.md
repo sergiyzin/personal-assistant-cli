@@ -114,7 +114,6 @@ personal-assistant-cli
 ├── notes.py # модель нотаток та менеджер нотаток
 ├── storage.py # збереження і завантаження JSON
 ├── validation.py # перевірка телефонів, email та інших даних
-├── requirements.txt інформація про залежності проєкту
 └── README.md
 
 # Команда
