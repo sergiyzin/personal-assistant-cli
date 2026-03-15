@@ -74,9 +74,6 @@ def main():
     print("Welcome to Personal Assistant!")
     print("Type 'help' to see all commands.\n")
 
-    # CLI цикл
-    while True:
-        command = input("Enter command: ").strip()
 
     def handle_help():
         print_help()
@@ -339,8 +336,6 @@ def main():
         except ValueError as error:
             print(f"Error: {error}")
 
-        except Exception as error:
-            print(f"Unexpected error: {error}")
 # Вхід у програму
 if __name__ == "__main__":
     main()
